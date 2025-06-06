@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rate Us</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+  <h2>How would you rate your experience?</h2>
+  <select id="rating" style="font-size: 16px; padding: 5px;">
+    <option value="5">⭐⭐⭐⭐⭐ - Excellent</option>
+    <option value="4">⭐⭐⭐⭐ - Good</option>
+    <option value="3">⭐⭐⭐ - Okay</option>
+    <option value="2">⭐⭐ - Poor</option>
+    <option value="1">⭐ - Bad</option>
+  </select>
+  <br><br>
+  <button onclick="submitRating()" style="padding: 10px 20px; font-size: 16px;">Submit</button>
+
+  <script>
+    function submitRating() {
+      const rating = document.getElementById("rating").value;
+      if (rating === "5") {
+        // Replace this with your real Google Review link
+        window.location.href = "https://g.page/YOUR-BUSINESS-NAME/review";
+      } else {
+        alert("Thanks for your feedback! We'll use it to improve.");
+        // Optionally send feedback to email or store it if you have backend
+      }
+    }
+  </script>
+</body>
+</html>
